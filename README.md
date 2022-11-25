@@ -153,7 +153,9 @@ The counter display element with an id of 'counter', containing the counter valu
 + *A decrement button with an id of 'decrement'*
 
 #### ***SOLUTION***
-`<link>`: https://github.com/ViktorG04/core-code-upskilling-readme/challenge-react/src/Components/counter
+`<link>`: https://github.com/ViktorG04/core-code-upskilling-readme/tree/main/challenge-react/src/Components/counter
+
+
 
 ### **React Santa Wish List**
 
@@ -174,4 +176,4 @@ The form should be a React component and should contain:
 it should be a controlled component (i.e. using onChange to bind input to the component's state)
 
 #### ***SOLUTION***
-`<link>`: https://github.com/ViktorG04/core-code-upskilling-readme/challenge-react/src/Components/formSanta
+`<link>`: https://github.com/ViktorG04/core-code-upskilling-readme/tree/main/challenge-react/src/Components/formSanta
