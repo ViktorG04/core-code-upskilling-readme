@@ -1,0 +1,21 @@
+# dependencies
+/challenge-react/node_modules
+/challenge-react/.pnp
+/challenge-react/.pnp.js
+
+# testing
+/challenge-react/coverage
+
+# production
+/challenge-react/build
+
+# misc
+/challenge-react/.DS_Store
+/challenge-react/.env.local
+/challenge-react/.env.development.local
+/challenge-react/.env.test.local
+/challenge-react/.env.production.local
+
+/challenge-react/npm-debug.log*
+/challenge-react/yarn-debug.log*
+/challenge-react/yarn-error.log*

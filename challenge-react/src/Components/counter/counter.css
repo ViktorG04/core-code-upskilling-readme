@@ -1,0 +1,38 @@
+/* Counter CSS */
+.counter-container{
+    background-color: #4791d0;
+      margin: 50px 0px;
+      width: 600px;
+      border-style: solid;
+    }
+    
+    .button-container{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+    .counter, h1{
+      color: black;
+      font-size: 100px;
+      text-align: center;
+    }
+
+    h1{
+      font-size: 40px;
+    }
+    
+    .increment, .decrement{
+      color: black;
+      font-size: 20px;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 10px;
+      border-color: black;
+      border-width: 2px;
+    }
+    
+    .increment:hover, .decrement:hover {
+      background-color: #2bc45e;
+    }
+    
+    
