@@ -1,0 +1,26 @@
+.container-list {
+  background-color: #4791d0;
+  margin: 50px 0px;
+  width: 600px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.container-list > input {
+  font-family: "Open Sans", sans-serif;
+  width: 50%;
+  border-radius: 5px;
+  border: 2px solid #e2e2e2;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #1f1f1f;
+}
+
+.container-list > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}

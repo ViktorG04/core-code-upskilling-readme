@@ -1,0 +1,20 @@
+.container-Random{
+  background-color: #4791d0;
+  margin: 50px 0px;
+  width: 300px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+button {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+}
+
+h2{
+  margin: 0 0 10px 10px;
+}

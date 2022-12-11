@@ -24,7 +24,7 @@ const Counter = () => {
             <h1>COUNTER</h1>
             <div className="counter"> {counter}</div>
             <div className="button-container">
-                <button className="increment" onClick={() => { increment() }} > Incremet </button>
+                <button className="increment" onClick={() => { increment() }} > Increment </button>
                 <button className="decrement" disabled={state} onClick={() => { decrement() }}> Decrement </button>
             </div>
         </div>

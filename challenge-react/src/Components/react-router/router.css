@@ -1,0 +1,12 @@
+.router-container{
+	background-color: #4791d0;
+	margin: 50px 0px;
+	width: 400px;
+	border-style: solid;
+}
+
+.link-css{
+	font-weight: bold;
+	color: rgb(30, 30, 110);
+	font-size: 24px;
+}
