@@ -72,8 +72,7 @@ Examples:
 
 ```javascript
 const oddOrEven = (arr) => {
-
-  if(!arr.length){
+  if (!arr.length) {
     return "even";
   }
 
@@ -198,6 +197,7 @@ it should be a controlled component (i.e. using onChange to bind input to the co
 React code to build a simple search filter functionality to display a filtered list based on the search query entered by the user.
 
 #### **_SOLUTION_**
+
 `<link>`: https://github.com/ViktorG04/core-code-upskilling-readme/tree/main/challenge-react/src/Components/searchFilter
 
 ### **Fetch Random User Data**
@@ -205,6 +205,7 @@ React code to build a simple search filter functionality to display a filtered l
 React code to fetch from this API random users. You should display the Name, website, email and phone of a random user. Also there should be a Reset button to fetch a new user (For this you need to generate a random number from 1 to 10).
 
 #### **_SOLUTION_**
+
 `<link>`: https://github.com/ViktorG04/core-code-upskilling-readme/tree/main/challenge-react/src/Components/fetchRandomData
 
 ### **React Router Blog**
@@ -212,6 +213,7 @@ React code to fetch from this API random users. You should display the Name, web
 Create a blog with React Router and get info from posts from a json file.
 
 #### **_SOLUTION_**
+
 `<link>`: https://github.com/ViktorG04/core-code-upskilling-readme/tree/main/challenge-react/src/Components/react-router
 
 ## **WEEK 4**
@@ -221,18 +223,19 @@ Create a blog with React Router and get info from posts from a json file.
 Take 2 strings s1 and s2 including only letters from 'a' to 'z'. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
 
 ```javascript
-const longest = (s1, s2) =>{
+const longest = (s1, s2) => {
   const allStrings = [...s1, ...s2];
   const stringsOrder = allStrings.sort();
-  const abc = [... new Set(stringsOrder)].join('');
+  const abc = [...new Set(stringsOrder)].join("");
 
   return abc;
-}
+};
 
-console.log(longest("aretheyhere", "yestheyarehere")) // result => "aehrsty"
-console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding")) // result => "abcdefghilnoprstu"
-console.log(longest("inmanylanguages", "theresapairoffunctions")) // result => "acefghilmnoprstuy"
+console.log(longest("aretheyhere", "yestheyarehere")); // result => "aehrsty"
+console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding")); // result => "abcdefghilnoprstu"
+console.log(longest("inmanylanguages", "theresapairoffunctions")); // result => "acefghilmnoprstuy"
 ```
+
 ### **Leap Years**
 
 In this kata you should simply determine, whether a given year is a leap year or not. In case you don't know the rules, here they are:
@@ -243,23 +246,23 @@ In this kata you should simply determine, whether a given year is a leap year or
 
 Additional Notes:
 Only valid years (positive integers) will be tested, so you don't have to validate them
+
 ```javascript
 const isLeapYear = (year) => {
-
-    if ( !(year%4) && ((year%100) || !(year%400)) ) {
-        return true;
-    };
-    return false;
+  if (!(year % 4) && (year % 100 || !(year % 400))) {
+    return true;
+  }
+  return false;
 };
 
-console.log(isLeapYear(1234)) // => false
-console.log(isLeapYear(1984)) // => true
-console.log(isLeapYear(2000)) // => true
-console.log(isLeapYear(2010)) // => false
-console.log(isLeapYear(2013)) // => false
-console.log(isLeapYear(1000)) // => false
-console.log(isLeapYear(1800)) // => false
-console.log(isLeapYear(1900)) // => false 
+console.log(isLeapYear(1234)); // => false
+console.log(isLeapYear(1984)); // => true
+console.log(isLeapYear(2000)); // => true
+console.log(isLeapYear(2010)); // => false
+console.log(isLeapYear(2013)); // => false
+console.log(isLeapYear(1000)); // => false
+console.log(isLeapYear(1800)); // => false
+console.log(isLeapYear(1900)); // => false
 ```
 
 ### **Maximum Length Difference**
@@ -271,35 +274,54 @@ _**Find max(abs(length(x) − length(y)))**_
 If a1 and/or a2 are empty return -1 in each language except in Haskell (F#) where you will return Nothing (None).
 
 ```javascript
-const mxdiflg = (a1, a2) =>{
-    if (!a1.length || !a2.length) {
-        return -1;
-    }
-    const a1Order = a1.sort((a, b) => a.length - b.length);
-    const a2Order = a2.sort((a, b) => a.length - b.length);
+const mxdiflg = (a1, a2) => {
+  if (!a1.length || !a2.length) {
+    return -1;
+  }
+  const a1Order = a1.sort((a, b) => a.length - b.length);
+  const a2Order = a2.sort((a, b) => a.length - b.length);
 
-    const X = Math.abs(a1Order[0].length - a2Order[a2.length - 1].length)
-    const Y = Math.abs(a2Order[0].length - a1Order[a1.length - 1].length)
+  const X = Math.abs(a1Order[0].length - a2Order[a2.length - 1].length);
+  const Y = Math.abs(a2Order[0].length - a1Order[a1.length - 1].length);
 
-    return Math.max(X, Y)
+  return Math.max(X, Y);
 };
 
-console.log(mxdiflg(["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"], ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"])); //--> 13
+console.log(
+  mxdiflg(
+    [
+      "hoqq",
+      "bbllkw",
+      "oox",
+      "ejjuyyy",
+      "plmiis",
+      "xxxzgpsssa",
+      "xxwwkktt",
+      "znnnnfqknaz",
+      "qqquuhii",
+      "dvvvwz",
+    ],
+    ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+  )
+); //--> 13
 
-console.log(mxdiflg([ 'sscccaa', 'ydddd', 'ttggg', 'vvvvnnnnnnrrrzzzzgg', 'rry' ],
-[
-  'jjlzzlllxxxxv',
-  'gggcsdddwc',
-  'jjjlkkkktt',
-  'fgggrrrr',
-  'wwqqqllyyyyy',
-  'sss',
-  'ybbbcchhhhiiiwwx'
-])); //--> 16
+console.log(
+  mxdiflg(
+    ["sscccaa", "ydddd", "ttggg", "vvvvnnnnnnrrrzzzzgg", "rry"],
+    [
+      "jjlzzlllxxxxv",
+      "gggcsdddwc",
+      "jjjlkkkktt",
+      "fgggrrrr",
+      "wwqqqllyyyyy",
+      "sss",
+      "ybbbcchhhhiiiwwx",
+    ]
+  )
+); //--> 16
 ```
 
-
-### **Base64 Numeric Translator **
+### **Base64 Numeric Translator**
 
 Our standard numbering system is base-10, that uses digits 0 through 9. Binary is base-2, using only 1s and 0s. And hexadecimal is base-16, using digits 0 to 9 and A to F. A hexadecimal F has a base-10 value of 15.
 
@@ -307,14 +329,145 @@ Base-64 has 64 individual characters ("digits") which translate to the base-10 v
 
 ```javascript
 const base64toBase10 = (base64) => {
-    const base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-    const baseSplit = base64.split('');
-    return baseSplit.reduce((acc, item) => acc * 64 + base.indexOf(item), 0);
+  const base =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  const baseSplit = base64.split("");
+  return baseSplit.reduce((acc, item) => acc * 64 + base.indexOf(item), 0);
 };
 console.log(base64toBase10("/")); // -->  63
 console.log(base64toBase10("BA")); //-->  64
 console.log(base64toBase10("BB")); //-->  65
 console.log(base64toBase10("BC")); //-->  66
-console.log(base64toBase10("//")) //--> 4095 
-console.log(base64toBase10("WIN")) //-->  90637 
+console.log(base64toBase10("//")); //--> 4095
+console.log(base64toBase10("WIN")); //-->  90637
+```
+
+## **WEEK 5**
+
+### **Fun With Lists**
+
+Implement the method map, which accepts a linked list (head) and a mapping function, and returns a new linked list (head) where every element is the result of applying the given mapping method to each element of the original list.
+
+`<link>`: https://www.codewars.com/kata/58259d9062cfb45e1a00006b/train/javascript
+
+```javascript
+const = map(head, f) =>{
+
+  if (!head){
+    return head;
+  }
+
+  let result = null;
+  let acc = null;
+  let node = head;
+
+  while (!!node) {
+    if (!result) {
+      result = new Node(f(node.data), null);
+      acc = result;
+    } else {
+      acc.next = new Node(f(node.data), null);
+      acc = acc.next;
+    }
+    node = node.next;
+  }
+  return result;
+}
+```
+
+### **Separating Strings**
+
+Create a function that takes a string and separates it into a sequence of letters.
+
+`<link>`: https://www.codewars.com/kata/5977ef1f945d45158d00011f/train/javascript
+
+```javascript
+const sepStr = (str) => {
+  const arr = [];
+  const newArr = str.split(" ");
+  const length = Math.max(...newArr.map((item) => item.length));
+
+  let flat = 0;
+  while (flat < length) {
+    let charts = [];
+    newArr.forEach((element) => {
+      charts.push(element.charAt(flat));
+    });
+    arr.push(charts);
+    flat += 1;
+  }
+  return arr;
+};
+
+console.log(sepStr("Just Live Life Man"));
+
+// => [['J','L','L','M'],
+// => ['u','i','i','a'],
+// => ['s','v','f','n'],
+// => ['t','e','e','']]);
+
+console.log(sepStr("The Mitochondria is the powerhouse of the cell"));
+
+/* [[ 'T', 'M', 'i', 't', 'p', 'o', 't', 'c' ],
+  [ 'h', 'i', 's', 'h', 'o', 'f', 'h', 'e' ],
+  [ 'e', 't', '', 'e', 'w', '', 'e', 'l' ],
+  [ '', 'o', '', '', 'e', '', '', 'l' ],
+  [ '', 'c', '', '', 'r', '', '', '' ],
+  [ '', 'h', '', '', 'h', '', '', '' ],
+  [ '', 'o', '', '', 'o', '', '', '' ],
+  [ '', 'n', '', '', 'u', '', '', '' ],
+  [ '', 'd', '', '', 's', '', '', '' ],
+  [ '', 'r', '', '', 'e', '', '', '' ],
+  [ '', 'i', '', '', '', '', '', '' ],
+  [ '', 'a', '', '', '', '', '', '' ]] */
+```
+
+### **Highest Scoring Word**
+
+Given a string of words, you need to find the highest scoring word.
+Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+You need to return the highest scoring word as a string.
+If two words score the same, return the word that appears earliest in the original string.
+All letters will be lowercase and all inputs will be valid.
+
+```javascript
+const high = (x) => {
+  const base = "_abcdefghijklmnopqrstuvwxyz";
+
+  const words = x.split(" ");
+
+  const sumLetters = (word) =>
+    word.reduce((acc, item) => acc + base.indexOf(item), 0);
+
+  const result = words.map((item) => sumLetters(item.split("")));
+
+  const value = Math.max(...result);
+
+  const indexFind = result.findIndex((item) => item === value);
+
+  return words.find((_, index) => index === indexFind);
+};
+
+console.log(high("man i need a taxi up to ubud")); //--> taxi
+console.log(high("aa b")); // -->aa
+```
+
+### **Where Is My Parent?**
+
+`<link>`: https://www.codewars.com/kata/58539230879867a8cd00011c/train/javascript
+
+```javascript
+const findChildren = (dancingBrigade) => {
+  const letters = dancingBrigade
+    .split("")
+    .sort((a, b) => a.localeCompare(b, "kf", { caseFirst: "upper" }))
+    .join("");
+  return letters;
+};
+console.log(findChildren("beeeEBb")); // -->BbbEeee
+console.log(findChildren("uwwWUueEe")); // -->EeeUuuWww
+console.log(findChildren("abBA")); // -->AaBb
+console.log(findChildren("AaaaaZazzz")); // -->AaaaaaZzzz
+console.log(findChildren("CbcBcbaA")); // -->AaBbbCcc
+console.log(findChildren("xXfuUuuF")); // -->FfUuuuXx
 ```
